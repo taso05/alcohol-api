@@ -8,6 +8,10 @@ Bundler.require(*Rails.groups)
 
 module Myapp
   class Application < Rails::Application
+    # テストを自動生成しない
+    config.generators do |g|
+      g.test_framework false
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
